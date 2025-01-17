@@ -1,6 +1,6 @@
 FROM python:3
-ADD app.py /
-RUN pip install flask
-RUN pip install flask-restful
+WORKDIR /app
+ADD . /app
+RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 9090
-CMD [ "python", "./app.py" ]
+CMD [ "python", "app.py" ]

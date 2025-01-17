@@ -1,4 +1,4 @@
-name: Deploy with Terraform
+name: Deploy with Terraform 2
 
 on:
   push:

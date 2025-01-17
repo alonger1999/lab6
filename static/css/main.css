@@ -1,0 +1,77 @@
+.title {
+
+    width: fit-content;
+    margin: 50px auto;
+    color: #585858;
+    font-size: 250%;
+
+}
+
+.form {
+
+    width: fit-content;
+    margin: 20px auto;
+    color: #383838;
+    font-size: 150%;
+
+}
+
+.form .form-group {
+    margin: 10px 0;
+}
+
+.form .form-buttons {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0;
+
+}
+
+.form .form-buttons button {
+    font-size: 80%;
+}
+
+.form .form-buttons button:hover {
+    cursor: pointer;
+}
+
+.items {
+
+    width: fit-content;
+    margin: 80px auto;
+
+}
+
+.items .item {
+
+    margin: 30px 0;
+    border: 2px dashed #707070;
+    padding: 10px;
+    border-radius: 15px;
+
+}
+
+.items .item h3 {
+
+    margin: 5px 0;
+    color: #585858;
+
+}
+
+.items .item p {
+
+    margin: 5px 0;
+    color: #707070;
+
+}
+
+.no-items-title {
+
+    width: fit-content;
+    margin: 80px auto;
+    color: #707070;
+    font-size: 150%;
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Lab 3 </title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    </head>
+
+    <body>
+
+        <h1 class="title"> Lab 3 </h1>
+
+        <form class="form" action="{{ url_for('index') }}" method="post">
+
+            <div class="form-group">
+                <label for="name"> Назва: </label>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="amount"> Сума збитків: </label>
+                <input type="number" min="0" step=".01" id="amount" name="amount">
+            </div>
+
+            <div class="form-group">
+                <label for="reason"> Причина: </label>
+                <select name="reason" id="reason">
+                    <option value="agression"> Збройна агресія </option>
+                    <option value="disaster"> Стихійне лихо </option>
+                </select>
+            </div>
+
+            <div class="form-buttons">
+                <button name="add"> Додати </button>
+                <button name="clear"> Очистити </button>
+            </div>
+
+        </form>
+
+        {% if items %}
+
+            <div class="items">
+
+                {% for item in items %}
+
+                    <div class="item">
+                        <h3> {{ item.name }} </h3>
+                        <p> Сума збитків: {{ item.amount }} </p>
+                        <p> Причина: {{ item.reason }} </p>
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% else %}
+            <p class="no-items-title"> Немає записів </p>
+        {% endif %}
+
+    </body>
+
+</html>
